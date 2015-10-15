@@ -1,0 +1,32 @@
+<!-- archive.html -->
+<html>
+<head>
+<title>WhatPageOfGoogleAreYouIN</title>
+</head>
+<body>
+<h1>What Page Of Google Are You In</h1>
+
+<p>You are welcome to use the service for free. </p>
+<hr>
+<form action = "/whatpageofsearchamion/create/" method = "post">
+    {% csrf_token %}
+    Keyword <input type = "text" name = "keyword"><br>
+    Domain name http://<input type = "text" name = "domain_name"></br>
+    <input type = "submit" value = "Submit">
+</form>
+<hr>
+
+
+
+<h2> {{position_in_search}}</h2>
+<h2> {{keyword}}</h2>
+<hr>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p>Powered by Django web framework<br>
+Developed by Bhishan Bhandari</p>
+</body>
+</html>

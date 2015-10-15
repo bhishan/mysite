@@ -1,0 +1,9 @@
+from django.db import models
+
+
+from django import forms
+# Create your models here.
+
+class SearchForm(forms.Form):
+    keyword = forms.CharField(label = "Keyword", max_length = 100)
+    domain_name = forms.CharField(label = "Url http://", max_length = 100)

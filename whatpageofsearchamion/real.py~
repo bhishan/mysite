@@ -1,0 +1,34 @@
+import mechanize
+def mypositioningoogle(key, domain):
+    br = mechanize.Browser() #initiating a browser
+
+    br.set_handle_robots(False) #we're acting like we're not a bot/robot
+
+#user aget 
+    br.addheaders = [("User-agent","Mozilla/5.0")]
+
+    qe="" 
+
+    alert = ""
+    for i in range(0,len(q)):
+        if q[i] ==" ":
+            qe+="+"
+        else:
+            qe+=q[i]
+
+
+
+    counter = 0
+
+    for i in range(0,10):
+        google_url = br.open("https://www.google.com/search?q=" + qe + "&start=" + str(counter))
+        search_keyword = google_url.read()
+        if "http://www.nepalhilltrekking.com" in search_keyword:
+            alert = "found"
+            break
+        counter+=10
+
+    if alert == "found":
+        print "Found at page:: ",i+1
+    else:
+        print "not found"

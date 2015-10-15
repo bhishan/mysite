@@ -1,0 +1,39 @@
+<!-- archive.html -->
+<html>
+<head>
+<title>WhatPageOfGoogleAreYouIn</title>
+</head>
+<body>
+<h1 style="color: green">What Page Of Google Are You In</h1>
+
+<p>You are welcome to use the service for free. </p>
+<hr style="height:10px;color: green;background: green;">
+<div style="height:50px;"></div>
+<form method = "post">
+    {% csrf_token %}
+    <div style="color:green">
+    <div style="width:100%;">
+    <div style="width:20%;float:left"> Keyword</div> <div> <input style="color:green;width:50%;" type = "text" name = "keyword" placeholder="keyword"></div>
+    </div>
+    <div style="height:20px;"></div>
+        <div style="width:100%">
+    <div style="width:20%;float:left"> Domain name http://</div><div><input style="color: green;width:50%;" type = "text" name = "domain_name" placeholder="domain name with www"></div>
+            </div>
+    </div>
+    <div style="height:20px;"></div>
+
+    <input style="color: green;" type = "submit" value = "Submit">
+
+</form>
+<hr style="height:10px;color: green;background: green;">
+
+
+
+<h2 style="color:green;"> {{position_in_search}}</h2>
+<h2> {{keyword}}</h2>
+
+<div style=" position : absolute;bottom : 0;height : 40px;margin-top : 40px;">
+    Powered By Django Framework, Built By Bhishan Bhandari
+</div>
+</body>
+</html>
